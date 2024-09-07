@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifetime GTA Roleplay Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        nav {
+            background-color: #1abc9c;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #34495e;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rules {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .rules div {
+            padding: 10px;
+            background-color: #1abc9c;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .rule-content {
+            display: none;
+            padding: 20px;
+            background-color: #34495e;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#rules">Regeln</a>
+</nav>
+
+<header id="home">
+    <h1>Lifetime GTA Roleplay</h1>
+    <p>Willkommen auf unserem GTA 5 Roleplay Server!</p>
+</header>
+
+<section id="rules">
+    <h2>Server Regeln</h2>
+
+    <div class="rules">
+        <div onclick="showRule('general')">Allgemeine Regeln</div>
+        <div onclick="showRule('discord')">Discord Regeln</div>
+        <div onclick="showRule('teamspeak')">Teamspeak Regeln</div>
+        <div onclick="showRule('ic')">IC Regeln</div>
+    </div>
+
+    <div id="general" class="rule-content active">
+        <h3>Allgemeine Regeln</h3>
+        <ul>
+            <li>Respektiere alle Mitspieler.</li>
+            <li>Keine Beleidigungen oder toxisches Verhalten.</li>
+            <li>Cheating oder Hacking sind strengstens verboten.</li>
+        </ul>
+    </div>
+
+    <div id="discord" class="rule-content">
+        <h3>Discord Regeln</h3>
+        <ul>
+            <li>Haltet euch an die Discord-Nutzungsbedingungen.</li>
+            <li>Spam und unerwünschte Werbung sind verboten.</li>
+            <li>Seid respektvoll und freundlich im Umgangston.</li>
+        </ul>
+    </div>
+
+    <div id="teamspeak" class="rule-content">
+        <h3>Teamspeak Regeln</h3>
+        <ul>
+            <li>Stört keine laufenden Gespräche.</li>
+            <li>Kein Schreien oder laute Geräusche in den Channels.</li>
+            <li>Benutzt die richtigen Channels für eure Gespräche.</li>
+        </ul>
+    </div>
+
+    <div id="ic" class="rule-content">
+        <h3>IC Regeln</h3>
+        <ul>
+            <li>Kein Meta-Gaming (keine Nutzung von OOC-Wissen im IC).</li>
+            <li>RDM und VDM sind verboten (Random Deathmatch, Vehicle Deathmatch).</li>
+            <li>Spielt euren Charakter realistisch.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lifetime Roleplay Server</p>
+</footer>
+
+<script>
+    function showRule(rule) {
+        var contents = document.querySelectorAll('.rule-content');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+
+        document.getElementById(rule).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
